@@ -1,23 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-    <script src="js/application.js"></script>
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link href="css/custom.css" rel="stylesheet" />
   </head>
   <body>
+    <div class="container">
+      <h1 class="mb-2">Your Cart</h1>
+      <div class="row w-100">
+        <div class="col-12">
+          <table class="table table-responsive" id="cart">
+            <thead>
+              <tr>
+                <th scope="col">Item Name</th>
+                <th scope="col">Price ($)</th>
+                <th scope="col">QTY</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="item">Shoulder Handbag</td>
+                <td class="price">100</td>
+                <td class="quantity">
+                  <input type="number" value="1" min="0" max="15" />
+                </td>
+                <td class="total-price"></td>
+                <td>
+                  <button class="btn btn-danger btn-sm rounded-5 remove">
+                    remove
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="item">Sandals</td>
+                <td class="price">50</td>
+                <td class="quantity">
+                  <input type="number" value="1" min="0" max="15" />
+                </td>
+                <td class="total-price"></td>
+                <td>
+                  <button class="btn btn-danger btn-sm rounded-5 remove">
+                    remove
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="item">T-Shirt</td>
+                <td class="price">25</td>
+                <td class="quantity">
+                  <input type="number" value="1" min="0" max="15" />
+                </td>
+                <td class="total-price"></td>
+                <td>
+                  <button class="btn btn-danger btn-sm rounded-5 remove">
+                    remove
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
+          <form
+            class="col-12 mt-2 mb-4
+            id="addItems"
+          >
+            <input
+              class="mx-1"
+              name="item"
+              type="text"
+              placeholder="Item name"
+              
+            />
+            <input
+              class="mx-1"
+              name="price"
+              type="number"
+              placeholder="Price"
+              min="20"
+              
+            />
+            <input
+              class="mx-1"
+              name="quantity"
+              type="number"
+              placeholder="Quantity"
+             
+            />
+            <!-- <input class="mx-1" name="total" placeholder="Total" /> -->
+            <button class="btn btn-primary btn-sm rounded-5 add-items" type="submit">add</button>
+          </form>
+
+          <div class="cart-final-total">
+            <h2 class="cart-total"></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/application.js"></script>
   </body>
 </html>
