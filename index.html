@@ -21,7 +21,7 @@
     <link href="css/custom.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container">
+    <div class="container p-4">
       <h1 class="mb-2">Your Cart</h1>
       <div class="row w-100">
         <div class="col-12">
@@ -36,8 +36,21 @@
             </thead>
             <tbody>
               <tr>
-                <td class="item">Shoulder Handbag</td>
-                <td class="price">100</td>
+                <td class="item">Powdered Sugar Donut</td>
+                <td class="price">3</td>
+                <td class="quantity">
+                  <input type="number" value="0" min="0" max="15" />
+                </td>
+                <td class="total-price"></td>
+                <td>
+                  <button class="btn btn-danger btn-sm rounded-5 remove">
+                    remove
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="item">Slice Cake</td>
+                <td class="price">4</td>
                 <td class="quantity">
                   <input type="number" value="1" min="0" max="15" />
                 </td>
@@ -49,21 +62,8 @@
                 </td>
               </tr>
               <tr>
-                <td class="item">Sandals</td>
-                <td class="price">50</td>
-                <td class="quantity">
-                  <input type="number" value="1" min="0" max="15" />
-                </td>
-                <td class="total-price"></td>
-                <td>
-                  <button class="btn btn-danger btn-sm rounded-5 remove">
-                    remove
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="item">T-Shirt</td>
-                <td class="price">25</td>
+                <td class="item">Apple Tart</td>
+                <td class="price">6</td>
                 <td class="quantity">
                   <input type="number" value="1" min="0" max="15" />
                 </td>
@@ -78,7 +78,7 @@
           </table>
 
           <form
-            class="col-12 mt-2 mb-4
+            class="col-12 mt-4 mb-4
             id="addItems"
           >
             <input
@@ -107,7 +107,7 @@
             <button class="btn btn-primary btn-sm rounded-5 add-items" type="submit">add</button>
           </form>
 
-          <div class="cart-final-total">
+          <div class="mt-1 mb-5 cart-final-total">
             <h2 class="cart-total"></h2>
           </div>
         </div>
